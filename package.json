@@ -1,12 +1,12 @@
 {
   "name": "vue-datepicker",
-  "description": "A Datepicker Component For Vue2",
+  "description": "A Datepicker Component For Vue2 with bootstrap 4 theme",
   "main": "lib/index.js",
   "files": [
     "lib",
     "src"
   ],
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --open --config build/webpack.dev.config.js",
     "demo": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.demo.config.js",
