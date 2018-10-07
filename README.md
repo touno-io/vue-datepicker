@@ -1,35 +1,33 @@
-# vue2-datepicker
+# vue-datepicker-bootstrap
 
-[中文版](https://github.com/mengxiong10/vue2-datepicker/blob/master/README.zh-CN.md)
+> A Datepicker Component For Vue support bootstrap 4 theme
 
-> A Datepicker Component For Vue2
-
-<a href="https://travis-ci.org/mengxiong10/vue2-datepicker">
-  <img src="https://travis-ci.org/mengxiong10/vue2-datepicker.svg?branch=master" alt="build:passed">
+<a href="https://travis-ci.org/touno-project/vue-datepicker-bootstrap">
+  <img src="https://travis-ci.org/touno-project/vue-datepicker-bootstrap.svg?branch=master" alt="build:passed">
 </a>
-<a href="https://coveralls.io/github/mengxiong10/vue2-datepicker">
-  <img src="https://coveralls.io/repos/github/mengxiong10/vue2-datepicker/badge.svg?branch=master" alt="Badge">
+<a href="https://coveralls.io/github/touno-project/vue-datepicker-bootstrap">
+  <img src="https://coveralls.io/repos/github/touno-project/vue-datepicker-bootstrap/badge.svg?branch=master" alt="Badge">
 </a>
 <a href="LICENSE">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
 </a>
 
 ## Demo
-<https://mengxiong10.github.io/vue2-datepicker/demo/index.html>
+<https://touno-project.github.io/vue-datepicker-bootstrap/demo/index.html>
 
-![image](https://github.com/mengxiong10/vue2-datepicker/raw/master/screenshot/demo.PNG)
+![image](https://github.com/touno-project/vue-datepicker-bootstrap/raw/master/screenshot/demo.PNG)
 
 ## Install
 
 ```bash
-$ npm install vue2-datepicker --save
+$ npm install vue-datepicker-bootstrap --save
 ```
 
 ## Usage
 
 ```html
 <script>
-import DatePicker from 'vue2-datepicker'
+import DatePicker from 'vue-datepicker'
 
 export default {
   components: { DatePicker },
@@ -164,6 +162,6 @@ export default {
 
 ## License
 
-[MIT](https://github.com/mengxiong10/vue2-datepicker/blob/master/LICENSE)
+[MIT](https://github.com/touno-project/vue-datepicker-bootstrap/blob/master/LICENSE)
 
 Copyright (c) 2017-present xiemengxiong

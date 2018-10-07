@@ -9,9 +9,9 @@
       'width': computedWidth
     }"
     v-clickoutside="closePopup">
-    <div class="mx-input-wrapper"
-      @click="showPopup">
+    <div @click="showPopup">
       <input
+        class="form-control"
         :class="inputClass"
         ref="input"
         type="text"
@@ -103,7 +103,7 @@ import { use, t } from '@/locale/index'
 import CalendarPanel from './calendar.vue'
 
 export default {
-  name: 'DatePicker',
+  name: 'VueDatepicker',
   components: { CalendarPanel },
   directives: {
     clickoutside
@@ -116,7 +116,7 @@ export default {
     },
     lang: {
       type: [String, Object],
-      default: 'zh'
+      default: 'en'
     },
     format: {
       type: String,
