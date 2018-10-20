@@ -1,27 +1,26 @@
-# vue-datepicker-bootstrap
+# @touno-io/vue-datepicker
 
 > A Datepicker Component For Vue support bootstrap 4 theme
 
 ![travis.org](https://img.shields.io/travis/touno-io/vue-datepicker.svg?style=flat-square)
-![coveralls.io](https://coveralls.io/repos/github/touno-io/vue-datepicker/badge.svg?style=flat-square)
 ![LICENSE](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
 ## Demo
-<https://touno-project.github.io/vue-datepicker-bootstrap/demo/index.html>
+<https://touno-io.github.io/vue-datepicker/demo/index.html>
 
-![image](https://github.com/touno-project/vue-datepicker-bootstrap/raw/master/screenshot/demo.PNG)
+![image](https://raw.githubusercontent.com/touno-io/vue-datepicker/master/screenshot/demo.png)
 
 ## Install
 
 ```bash
-$ npm install vue-datepicker-bootstrap --save
+$ npm install @touno-io/vue-datepicker --save
 ```
 
 ## Usage
 
 ```html
 <script>
-import DatePicker from 'vue-datepicker'
+import DatePicker from '@touno-io/vue-datepicker'
 
 export default {
   components: { DatePicker },
@@ -156,6 +155,6 @@ export default {
 
 ## License
 
-[MIT](https://github.com/touno-project/vue-datepicker-bootstrap/blob/master/LICENSE)
+[MIT](https://github.com/touno-io/vue-datepicker/blob/master/LICENSE)
 
 Copyright (c) 2017-present xiemengxiong
