@@ -1,5 +1,5 @@
 {
-  "name": "vue-datepicker-bootstrap4",
+  "name": "@touno-io/vue-datepicker",
   "description": "A Datepicker Component For Vue2 with bootstrap 4 theme",
   "main": "lib/index.js",
   "files": [
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/touno-project/vue-datepicker-bootstrap4.git"
+    "url": "git+https://github.com/touno-io/vue-datepicker.git"
   },
   "keywords": [
     "vue",
@@ -39,9 +39,9 @@
   "author": "xiemengxiong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/touno-project/vue-datepicker-bootstrap4/issues"
+    "url": "https://github.com/touno-io/vue-datepicker/issues"
   },
-  "homepage": "https://github.com/touno-project/vue-datepicker-bootstrap4#readme",
+  "homepage": "https://github.com/touno-io/vue-datepicker#readme",
   "dependencies": {
     "fecha": "^2.3.3"
   },
