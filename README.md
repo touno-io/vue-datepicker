@@ -2,15 +2,9 @@
 
 > A Datepicker Component For Vue support bootstrap 4 theme
 
-<a href="https://travis-ci.org/touno-project/vue-datepicker-bootstrap">
-  <img src="https://travis-ci.org/touno-project/vue-datepicker-bootstrap.svg?branch=master" alt="build:passed">
-</a>
-<a href="https://coveralls.io/github/touno-project/vue-datepicker-bootstrap">
-  <img src="https://coveralls.io/repos/github/touno-project/vue-datepicker-bootstrap/badge.svg?branch=master" alt="Badge">
-</a>
-<a href="LICENSE">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
-</a>
+![travis.org](https://img.shields.io/travis/touno-io/vue-datepicker.svg?style=flat-square)
+![coveralls.io](https://coveralls.io/repos/github/touno-io/vue-datepicker/badge.svg?style=flat-square)
+![LICENSE](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
 ## Demo
 <https://touno-project.github.io/vue-datepicker-bootstrap/demo/index.html>

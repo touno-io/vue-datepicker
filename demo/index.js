@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import DatePicker from '@/index'
 
-Vue.use(DatePicker)
-
 new Vue({  // eslint-disable-line
   el: '#app',
+  components: {
+    DatePicker
+  },
   data () {
     return {
       value1: new Date(),
@@ -15,7 +16,12 @@ new Vue({  // eslint-disable-line
       value6: '',
       value7: '',
       value8: '',
-      value9: ''
+      value9: '',
+      value10: '',
+      value11: '',
+      value12: '',
+      value13: new Date(),
+      value14: new Date()
     }
   },
   methods: {
@@ -102,7 +108,55 @@ new Vue({  // eslint-disable-line
           format="YYYY-MM-DD"
           confirm></date-picker>`
     }
+
+    const example4 = {
+      'with size sm': `
+        <date-picker
+          input-class="form-control-sm"
+          v-model="value10"
+          format="YYYY-MM-DD"
+          lang="en"
+          ></date-picker>`,
+      'size md': `
+        <date-picker
+          v-model="value11"
+          type="datetime"
+          lang="en"
+          format="YYYY-MM-DD hh:mm:ss"
+          ></date-picker>`,
+      'size lg': `
+        <date-picker
+          input-class="form-control-lg"
+          v-model="value12"
+          range
+          lang="en"
+          format="YYYY-MM-DD"
+          ></date-picker>`
+    }
+    const example5 = {
+      'readonly': `
+        <date-picker
+          v-model="value13"
+          format="YYYY-MM-DD"
+          lang="en"
+          :editable="false"
+          ></date-picker>`,
+      'disabled': `
+        <date-picker
+          v-model="value14"
+          type="datetime"
+          lang="en"
+          :disabled="true"
+          format="YYYY-MM-DD hh:mm:ss"
+          ></date-picker>`
+    }
     const arr = [
+      {
+        exam: example4
+      },
+      {
+        exam: example5
+      },
       {
         exam: example1
       },

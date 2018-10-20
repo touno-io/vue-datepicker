@@ -1,20 +1,17 @@
 <template>
   <div
     class="mx-datepicker"
-    :class="{
-      'mx-datepicker-range': range,
-      'disabled': disabled
-    }"
-    :style="{
-      'width': computedWidth
-    }"
+    :class="{ 'mx-datepicker-range': range, 'disabled': disabled }"
+    :style="{ 'width': computedWidth }"
     v-clickoutside="closePopup">
-    <div @click="showPopup">
+    <div>
       <input
         class="form-control"
         :class="inputClass"
         ref="input"
         type="text"
+        @focus="showPopup"
+        @blur="blurPopup"
         :name="inputName"
         :disabled="disabled"
         :readonly="!editable"
@@ -22,25 +19,29 @@
         :placeholder="innerPlaceholder"
         @input="handleInput"
         @change="handleChange">
-      <span class="mx-input-append">
+      <span v-if="!showClearIcon" class="mx-input-append">
         <slot name="calendar-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16px" height="16px">
-            <path d="M 6 1 L 6 3 L 5 3 C 3.9 3 3 3.9 3 5 L 3 19 C 3 20.1 3.9 21 5 21 L 19 21 C 20.1 21 21 20.1 21 19 L 21 5 C 21 3.9 20.1 3 19 3 L 18 3 L 18 1 L 16 1 L 16 3 L 8 3 L 8 1 L 6 1 z M 5 5 L 6 5 L 8 5 L 16 5 L 18 5 L 19 5 L 19 7 L 5 7 L 5 5 z M 5 9 L 19 9 L 19 19 L 5 19 L 5 9 z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M 6 1 L 6 3 L 5 3 C 3.9 3 3 3.9 3 5 L 3 19 C 3 20.1 3.9 21 5 21 L 19 21 C 20.1 21 21 20.1 21 19 L 21 5 C 21 3.9 20.1 3 19 3 L 18 3 L 18 1 L 16 1 L 16 3 L 8 3 L 8 1 L 6 1 z M 5 5 L 6 5 L 8 5 L 16 5 L 18 5 L 19 5 L 19 7 L 5 7 L 5 5 z M 5 9 L 19 9 L 19 19 L 5 19 L 5 9 z" fill="#4d4d4d"/>
           </svg>
         </slot>
       </span>
-      <span
-        v-if="showClearIcon"
+      <span v-else
         class="mx-input-append mx-clear-wrapper"
         @click.stop="clearDate">
         <slot name="mx-clear-icon">
-          <i class="mx-input-icon mx-clear-icon"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 212.982 212.982" style="enable-background:new 0 0 212.982 212.982;" width="16px" height="16px"> xml:space="preserve">
+            <g id="Close">
+              <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312   c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312   l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937   c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" fill="#4d4d4d"/>
+            </g>
+          </svg>
         </slot>
       </span>
     </div>
     <div class="mx-datepicker-popup"
       :style="position"
       v-show="popupVisible"
+      @click="unblurPopup"
       ref="calendar">
       <slot name="header">
         <div class="mx-shortcuts-wrapper"
@@ -83,7 +84,7 @@
         <div class="mx-datepicker-footer"
           v-if="confirm">
           <button type="button"
-            class="mx-datepicker-btn mx-datepicker-btn-confirm"
+            class="mx-datepicker-btn btn btn-sm btn-info"
             @click="confirmDate">{{ confirmText }}</button>
         </div>
       </slot>
@@ -340,6 +341,12 @@ export default {
     },
     closePopup () {
       this.popupVisible = false
+    },
+    blurPopup () {
+      console.log('blurPopup', this)
+    },
+    unblurPopup () {
+      console.log('unblurPopup', this)
     },
     displayPopup () {
       const dw = document.documentElement.clientWidth

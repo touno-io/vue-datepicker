@@ -12,7 +12,11 @@ $primary-color: #1284e7;
   }
   &.disabled {
     opacity: 0.7;
-    cursor: not-allowed;
+    cursor: default;
+  }
+ .form-control[readonly] {
+    background-color: #FFF;
+    opacity: 1;
   }
 }
 .mx-datepicker-range {
@@ -29,6 +33,7 @@ $primary-color: #1284e7;
   z-index: 1000;
 }
 
+
 .mx-input-wrapper {
   position: relative;
   .mx-clear-wrapper {
@@ -39,40 +44,51 @@ $primary-color: #1284e7;
       display: block;
     }
   }
+  
 }
-
-// .mx-input {
-//   display: inline-block;
-//   width: 100%;
-//   height: 34px;
-//   padding: 6px 30px;
-//   padding-left: 10px;
-//   font-size: 14px;
-//   line-height: 1.4;
-//   color: #555;
-//   background-color: #fff;
-//   border: 1px solid #ccc;
-//   border-radius: 4px;
-//   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-//   &:disabled,
-//   &.disabled {
-//     opacity: 0.7;
-//     cursor: not-allowed;
-//   }
-//   &:focus {
-//     outline: none;
-//   }
-// }
+.form-control-sm + .mx-input-append {
+  padding: 6px 4px;
+  &.mx-clear-wrapper {
+    padding: 5px 7px;
+    > svg {
+      width: 10px;
+    }
+  }
+  > svg {
+    width: 16px;
+  }
+}
+.form-control-lg + .mx-input-append {
+  width: 32px;
+  padding: 14px 0px;
+  &.mx-clear-wrapper {
+    padding: 14px 4px;
+    > svg {
+      width: 14px;
+    }
+  }
+  > svg {
+    width: 22px;
+  }
+}
 
 .mx-input-append {
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
   height: 100%;
-  padding: 6px;
-  background-color: #fff;
+  width: 26px;
+  padding: 10px 1px;
   background-clip: content-box;
+  > svg {
+    width: 18px;
+  }
+  &.mx-clear-wrapper {
+    padding: 9px 4px;
+    > svg {
+      width: 12px;
+    }
+  }
 }
 
 .mx-input-icon {
@@ -131,8 +147,8 @@ $primary-color: #1284e7;
       color: #48576a;
     }
   }
+  
 }
-
 .mx-datepicker-footer {
   padding: 4px;
   clear: both;
@@ -141,14 +157,14 @@ $primary-color: #1284e7;
 }
 .mx-datepicker-btn {
   font-size: 12px;
-  line-height: 1;
-  padding: 7px 15px;
-  margin: 0 5px;
-  cursor: pointer;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-radius: 3px;
+  // line-height: 1;
+  padding: 3px 15px;
+  // margin: 0 5px;
+  // cursor: pointer;
+  // background-color: transparent;
+  // outline: none;
+  // border: none;
+  // border-radius: 3px;
 }
 .mx-datepicker-btn-confirm {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -222,7 +238,7 @@ $primary-color: #1284e7;
       background-color: #eaf8fe;
     }
     &.disabled {
-      cursor: not-allowed;
+      cursor: default;
       color: #ccc;
       background-color: #f3f3f3;
     }  
